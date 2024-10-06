@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+:root{
+    --color-primario:#000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+
+    --fuente-montserat:font-family: 'monserrat', sans-serif;
+    --fuente-KRona:font-family: 'Krona', sans-serif;
+ }
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+  
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+.header{
+padding: 2% 0% 0% 15%;
+}
+.header_menu{
+    display: flex;
+    gap: 80px;
+
+}
+.header__menu__link{
+    font-family: var(--fuente-montserat);
+    font-size: 1.5rem;
+    font-weight:400 ;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.header__menu__link:hover{
+    background-color:  #278094;
+    border-radius: 4px; 
+    color: var(--color-secundario);
+    
+}
+.presentacion {
+    padding: 6% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-KRona);
+}
+.titulo-destaque {
+    color: var(--color-terciario); 
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserat);
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.presentacion__enlaces_subtitulo{
+    font-family: var(--fuente-KRona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+/*↓↓↓ este codigo cambia los botones del index */
+.presentacion__enlaces__link{
+   
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: #F6F6F6;
+    font-family: var(--fuente-montserat);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.presentacion__enlaces__link:hover{
+    background-color:  var(--color-hover);
+}
+
+.presentacion__imagen{
+width: 50%;
+}
+.footer{
+    background-color: #5cb1c4 ;
+    padding: 1.5rem;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-montserat);
+    font-size: 24;
+   
+}
+.texto__footer{
+    text-decoration: none;
+    color: #000000; 
+}
+
+
+/*desde aca empieza las medidas para dispositivos moviles*/
+
+@media (max-width:1200px ) {
+    .header{
+        padding: 10% ;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido{
+        width: auto;
+    }
+    .header_menu{
+        gap: 50px;
+    }
+   
+    
+    
+}
+    @media (max-width: 375px) {
+        .header {
+            padding: 5%; /* Ajusta el padding para reducir el espacio en los bordes */
+        }
+        
+        .header_menu {
+            gap: 14px; /* Mantén el gap en 14px como deseas */
+            flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+            justify-content: center; /* Centra los elementos del menú */
+        }
+    
+        .header__menu__link {
+            font-size: 1.2rem; /* Ajusta el tamaño de la fuente del menú para pantallas más pequeñas */
+        }
+    
+        .presentacion {
+            flex-direction: column-reverse;
+            padding: 5%;
+        }
+    
+        .presentacion__contenido {
+            width: 100%; /* Asegúrate de que el contenido ocupe todo el ancho disponible */
+        }
+    
+        .presentacion__contenido__titulo {
+            font-size: 24px; /* Ajusta el tamaño de la fuente del título */
+        }
+    
+        .presentacion__contenido__texto {
+            font-size: 16px; /* Ajusta el tamaño de la fuente del texto */
+        }
+    
+        .presentacion__imagen {
+            width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho disponible */
+        }
+    
+        .presentacion__enlaces__link {
+            width: 100%; /* Asegúrate de que los enlaces ocupen todo el ancho disponible */
+        }
+    }
+    
+
