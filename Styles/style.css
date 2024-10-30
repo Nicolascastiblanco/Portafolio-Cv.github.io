@@ -107,9 +107,29 @@ padding: 2% 0% 0% 15%;
     background-color:  var(--color-hover);
 }
 
-.presentacion__imagen{
-width: 50%;
+.presentacion__imagen {
+    width: 300px; /* Ajusta el tamaño de la imagen como prefieras */
+    transition: transform 0.3s ease;
 }
+
+/* Animación flotante */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Clase para activar la animación */
+.animate-float {
+    animation: float 2s ease-in-out infinite;
+}
+
 .footer{
     background-color: #5cb1c4 ;
     padding: 1.5rem;
